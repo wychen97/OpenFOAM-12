@@ -87,7 +87,7 @@ void Foam::solvers::twoPhaseSolver::incompressiblePressureCorrector
         fvScalarMatrix p_rghEqnSource
         (
             fvModels().sourceProxy(alpha1, p_rgh)
-          + fvModels().sourceProxy(alpha2, p_rgh)
+//          + fvModels().sourceProxy(alpha2, p_rgh)
         );
 
         while (pimple.correctNonOrthogonal())
