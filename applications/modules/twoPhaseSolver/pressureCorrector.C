@@ -95,7 +95,7 @@ void Foam::solvers::twoPhaseSolver::incompressiblePressureCorrector
             fvScalarMatrix p_rghEqn
             (
                 fvc::div(phiHbyA) - fvm::laplacian(rAUf, p_rgh)
-             == p_rghEqnSource
+//             == p_rghEqnSource
             );
 
             p_rghEqn.setReference
