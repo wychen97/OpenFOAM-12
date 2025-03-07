@@ -266,14 +266,10 @@ bool Foam::functionObjects::scalarTransport::execute()
         {
             for (int i=0; i<=nCorr_; i++)
             {
-//                volVectorField mygrads=fvc::grad(s_);
-//                volScalarField dsdy=mygrads.component(vector::Y);
-//                dimensionedScalar tone("tone", dimLength*dimless/dimTime, 1.0);
                 fvScalarMatrix sEqn
                 (
                     fvm::ddt(s_)
                   + fvm::div(phi, s_, divScheme)
-//                  + dsdy*tone
                  ==
                     fvModels.source(s_)
                 );
